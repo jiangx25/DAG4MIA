@@ -90,11 +90,9 @@ def train(model:nn.Module, ema_model:nn.Module, loader_train_s:list,
           loader_train_t:list, loader_valid_t:list, train_params:dict, writer):
     # define optimizer
     if train_params['optimizer'] == 'adam':
-        optimizer = optim.Adam(model.parameters(), lr=train_params['learning_rate'], 
-                            weight_decay=train_params['weight_decay'])
+        optimizer = optim.Adam(model.parameters(), lr=train_params['learning_rate'], weight_decay=train_params['weight_decay'])
     elif train_params['optimizer'] == 'sgd':
-        optimizer = optim.SGD(model.parameters(), lr=train_params['learning_rate'], momentum=train_params['momentum'],
-                            weight_decay=train_params['weight_decay'])
+        optimizer = optim.SGD(model.parameters(), lr=train_params['learning_rate'], momentum=train_params['momentum'], weight_decay=train_params['weight_decay'])
 
     # define losses
     dice_criterion = losses.DiceLoss()

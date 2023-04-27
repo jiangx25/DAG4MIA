@@ -27,12 +27,12 @@ from torchvision.utils import make_grid
 from dataloader.ms_fundus.fundus_dataloader import FundusSegmentation
 from dataloader.ms_fundus import fundus_transforms as tr
 from torch.utils.data import ConcatDataset, DataLoader
-from models.networks.sdnet import MEncoder, AEncoder, Segmentor, Ada_Decoder
+# from models.networks.sdnet import MEncoder, AEncoder, Segmentor, Ada_Decoder
 from models.weight_init import initialize_weights
 from utils.average_meter import AverageMeter
 from utils.utils_fundus import sample_minibatch_fundus
 from tensorboardX import SummaryWriter
-from pytorch_metric_learning import losses
+# from pytorch_metric_learning import losses
 torch.set_default_tensor_type('torch.FloatTensor')
 
 
